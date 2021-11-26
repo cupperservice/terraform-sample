@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "cupper" {
-  name = "cupper"
+  name = "${var.session.table_name}"
   hash_key = "sessionId"
   billing_mode = "PAY_PER_REQUEST"
   attribute {

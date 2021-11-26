@@ -17,7 +17,7 @@
       "logDriver": "awslogs",
       "options": {
         "awslogs-group": "/app-svr/task-definition",
-        "awslogs-region": "ap-northeast-1",
+        "awslogs-region": "${region}",
         "awslogs-stream-prefix": "app-svr"
       }
     },

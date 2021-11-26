@@ -1,12 +1,7 @@
 data "template_file" "app-svr-definition" {
   template = file("${path.module}/ecs_task_definitions/app-svr.json")
   vars = {
-    # aws_account_id       = data.aws_caller_identity.self.account_id
-    # region               = var.region
-    # environment          = terraform.workspace
-    # environment_large_id = local.environment_id_large
-    # environment_id       = local.environment_id_small
-    # ecr_repository_name  = aws_ecr_repository.entry-cms-batch.name
+    region               = var.region
     db_endpoint          = "${aws_db_instance.cupper-db.endpoint}"
     db_name              = var.database.name
     db_username          = var.database.username

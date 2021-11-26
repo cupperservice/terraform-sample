@@ -1,3 +1,4 @@
+variable "region" {}
 variable "az1" {}
 variable "az2" {}
 variable "bastion" {
@@ -23,6 +24,7 @@ variable "session" {
   type = map(any)
 
   default = {
-    table_name = "'"
+    table_name = ""
+    key_name = ""
   }
 }
