@@ -19,8 +19,8 @@ resource "aws_ecs_task_definition" "app-svr" {
   container_definitions    = data.template_file.app-svr-definition.rendered
   family                   = "app-svr"
   network_mode             = "awsvpc"
-  execution_role_arn       = "arn:aws:iam::391726422976:role/ecsTaskExecutionRole"
-  task_role_arn            = aws_iam_role.your-role.arn
+  execution_role_arn       = "${var.ecs.exec_role}"
+  task_role_arn            = "${var.ecs.task_role}"
   requires_compatibilities = ["FARGATE"]
   cpu                      = 1024
   memory                   = 2048

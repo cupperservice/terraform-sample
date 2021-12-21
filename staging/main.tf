@@ -20,4 +20,8 @@ module "common" {
     table_name = "cupper-Session"
     key_name = "sessionId"
   }
+  ecs = {
+    exec_role = ""
+    task_role = ""
+  }
 }

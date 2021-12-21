@@ -28,3 +28,12 @@ variable "session" {
     key_name = ""
   }
 }
+
+variable "ecs" {
+  type = map(any)
+  
+  default = {
+    exec_role = ""
+    task_role = ""
+  }
+}
